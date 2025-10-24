@@ -176,6 +176,30 @@
       padding: 10px 20px;
     }
 
+    .product {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      width: 259px;
+    }
+
+    .product p{
+      margin-bottom: 20px;
+    }
+
+    .product:hover{
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: auto;
+      max-height: 199px;
+      margin-bottom: 15px;
+    }
+
     /* ======== CARROSSEL DE PRODUTOS ======== */
     .carousel-container {
       position: relative;
@@ -232,31 +256,17 @@
 
     /* Produtos individuais dentro do carrossel */
     .product {
+      flex: 0 0 250px;
       background: #fff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.3s;
-      width: 259px;
     }
 
-    .product p{
-      margin-bottom: 20px;
-    }
-
-    .product .nome{
-      min-height: 3em;
-    }
-
-    .product:hover{
+    .product:hover {
       transform: translateY(-5px);
-    }
-
-    .product img {
-      width: auto;
-      max-height: 199px;
-      margin-bottom: 15px;
     }
 
     .price{
@@ -314,47 +324,6 @@
       margin-top: 10px;
     }
 
-    /* Paginação */
-    .pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      gap: 10px;
-      margin-bottom: 40px;
-    }
-
-    .pagination a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      color: #0D0D0D;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-
-    .pagination a:hover {
-      background: #c9a13cc4;
-      color: #fff;
-    }
-
-    .pagination .prev,
-    .pagination .next {
-      font-size: 1.2rem;
-    }
-
-    .pagination a.active {
-      background: #aaaaaa;
-      color: #fff;
-      pointer-events: none;
-    }
-
     /* Rodapé */
 
 footer {
@@ -366,7 +335,6 @@ footer {
   padding: 20px 30px;
   font-size: 14px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
 .footer-left {
@@ -374,28 +342,9 @@ footer {
   text-align: left;
 }
 
-.footer-center{
-  flex: 1;
-  display: flex;
-  gap: 10px;
-}
-
-.footer-center p{
-  margin-top: 2px;
-}
-
-.footer-center img{
-  width: 24px;
-  height: 24px;
-}
-
 .footer-right img {
   width: 24px;
   height: 24px;
-}
-
-.footer-right span{
-  margin-bottom: 4px;
 }
 
 .footer-right {

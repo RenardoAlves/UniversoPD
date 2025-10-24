@@ -6,24 +6,38 @@
   <title>Perfume Exemplo - Universo PD</title>
   <link rel="stylesheet" href="produto.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('.carousel');
+      const leftBtn = document.querySelector('.arrow.left');
+      const rightBtn = document.querySelector('.arrow.right');
+
+      rightBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 500, behavior: 'smooth' });
+      });
+
+      leftBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -500, behavior: 'smooth' });
+      });
+    });
+  </script>
 </head>
 <body>
 
   <!-- Cabeçalho -->
   <header>
     <div class="header-container">
-      <h1><a href="index.html">Universo PD</a></h1>
+      <h1><a href="../index.html">Universo PD</a></h1>
       <nav>
-        <a href="#">Masculinos</a>
-        <a href="#">Femininos</a>
-        <a href="#">Unisex</a>
-        <a href="#">Árabes</a>
-        <a href="#">Turcos</a>
-        <a href="#">Nacionais</a>
+        <a href="../masculinos.html">Masculinos</a>
+        <a href="../femininos.html">Femininos</a>
+        <a href="../unisex.html">Unisex</a>
+        <a href="../arabes.html">Árabes</a>
+        <a href="../turcos.html">Turcos</a>
+        <a href="../nacionais.html">Nacionais</a>
       </nav>
       <div class="header-right">
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <a href="../sobre.html">Sobre/Contato</a>
       </div>
     </div>
   </header>
@@ -33,14 +47,14 @@
     <div class="product-container">
       <!-- Imagem do produto -->
       <div class="product-image">
-        <img src="img-exemplo/al-oud.webp" alt="Perfume Exemplo">
+        <img src="../img/al-oud.webp" alt="Perfume Exemplo">
       </div>
 
       <!-- Informações do produto -->
       <div class="product-info">
         <h2>Perfume Exemplo</h2>
         <p class="tagline">Eau de Parfum • Masculino • 100ml</p>
-        <p class="price">R$ 250,00</p>
+        <p class="price">R$250,00</p>
 
         <p class="description">
           Uma fragrância sofisticada com notas amadeiradas e especiarias quentes. 
@@ -50,74 +64,127 @@
         <p class="contact">
         <a href="https://wa.me/5573981135119" class="whatsapp-button">
         Entre em contato pelo Whatsapp
-        <img src="img-exemplo/Whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+        <img src="../img/Whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
         </a>
         </p>
 
         <div class="social">
           <span>Compartilhar:</span>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=plantasdabahia.com.br/produtos/aipim"><img src="img-exemplo/Facebook.png" alt="Facebook"></a>
-          <a href="https://api.whatsapp.com/send?text=plantasdabahia.com.br/produtos/aipim"><img src="img-exemplo/Whatsapp.png" alt="WhatsApp"></a>
-          <a href="https://twitter.com/intent/tweet?text=Olhem+este+produto&url=plantasdabahia.com.br/produtos/aipim"><img src="img-exemplo/Twitter.png" alt="Twitter/X"></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=plantasdabahia.com.br/produtos/aipim"><img src="../img/Facebook.png" alt="Facebook"></a>
+          <a href="https://api.whatsapp.com/send?text=plantasdabahia.com.br/produtos/aipim"><img src="../img/Whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://twitter.com/intent/tweet?text=Olhem+este+produto&url=plantasdabahia.com.br/produtos/aipim"><img src="../img/Twitter.png" alt="Twitter/X"></a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
-
-        <div class="product-details">
-          <h3>Notas Olfativas</h3>
-          <ul>
-            <li><strong>Topo:</strong> Cítricos, Canela</li>
-            <li><strong>Coração:</strong> Oud, Rosa</li>
-            <li><strong>Fundo:</strong> Âmbar, Almíscar</li>
-          </ul>
-        </div>
       </div>
     </div>
   </main>
 
   <!-- Produtos relacionados -->
-  <section class="related">
-    <h2>Você também pode gostar</h2>
-    <div class="related-grid">
-      <div class="related-item">
-        <img src="img-exemplo/Asad.webp" alt="Perfume 1">
-        <p>Perfume Relacionado 1</p>
-        <p class="price">R$ 230,00</p>
-        <a href="produto.html" class="btn">Ver Detalhes</a>
+<section class="section">
+  <h2>PERFUMES EM DESTAQUE</h2>
+  <h1>Os mais populares do momento</h1>
+  <div class="carousel-container">
+    <button class="arrow left">&#10094;</button>
+  <div class="carousel">
+    <div class="products">
+      <div class="product">
+        <img src="../img/Club-de-Nuit-Intense-Man.webp" alt="Perfume 1">
+        <p class="nome">Club de Nuit Intense Man 100ml</p>
+        <p class="price">R$249,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
       </div>
-      <div class="related-item">
-        <img src="img-exemplo/club-de-nuit.jpg" alt="Perfume 2">
-        <p>Perfume Relacionado 2</p>
-        <p class="price">R$ 199,90</p>
-        <a href="produto.html" class="btn">Ver Detalhes</a>
+      <div class="product">
+        <img src="../img/Asad.webp" alt="Perfume 2">
+        <p class="nome">Asad EDP 100ml</p>
+        <p class="price">R$189,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
       </div>
-      <div class="related-item">
-        <img src="img-exemplo/sabah-al-ward.webp" alt="Perfume 3">
-        <p>Perfume Relacionado 3</p>
-        <p class="price">R$ 180,00</p>
-        <a href="produto.html" class="btn">Ver Detalhes</a>
+      <div class="product">
+        <img src="../img/bareeq-al-dhabab.webp" alt="Perfume 3">
+        <p class="nome">Bareeq Al Dhabab 100ml</p>
+        <p class="price">R$159,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
       </div>
-      <div class="related-item">
-        <img src="img-exemplo/sabah-al-ward.webp" alt="Perfume 3">
-        <p>Perfume Relacionado 3</p>
-        <p class="price">R$ 180,00</p>
-        <a href="produto.html" class="btn">Ver Detalhes</a>
+      <div class="product">
+        <img src="../img/sabah-al-ward.webp" alt="Perfume 4">
+        <p class="nome">Sabah Al Ward 100ml</p>
+        <p class="price">R$149,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/glacier-bold.webp" alt="Perfume 5">
+        <p class="nome">Glacier Bold 100ml</p>
+        <p class="price">R$189,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/Bade-e-Al-Oud-Oud-for-Glory.webp" alt="Perfume 6">
+        <p class="nome">Bade'e Al Oud For Glory 100ml</p>
+        <p class="price">R$229,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/fakhar-extrait.jpg" alt="Perfume 7">
+        <p class="nome">Fakhar Extrait 100ml</p>
+        <p class="price">R$219,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/intrude.jpg" alt="Perfume 8">
+        <p class="nome">Intrude EDP 100ml</p>
+        <p class="price">R$189,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/yara-edp.webp" alt="Perfume 9">
+        <p class="nome">Yara EDP 100ml</p>
+        <p class="price">R$239,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/hera-edp-for-women.webp" alt="Perfume 10">
+        <p class="nome">Hera EDP For Women 65ml</p>
+        <p class="price">R$185,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/baoli-edp-for-men.webp" alt="Perfume 11">
+        <p class="nome">Baoli EDP For Men 90ml</p>
+        <p class="price">R$215,00</p>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="product">
+        <img src="../img/venyx-lor.png" alt="Perfume 12">
+        <p class="nome">Venyx L'or 100ml</p>
+        <p class="price">R$169,90</p>
+        <a href="#" class="btn">Ver Detalhes</a>
       </div>
     </div>
-  </section>
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+</section>
 
   <footer>
     <div class="footer-left">
-      <p>CNPJ 10.303.722/0001-79</p>
+      <p>CNPJ 37.432.157/0001-04</p>
+    </div>
+    <div class="footer-center">
+      <p>Desenvolvido por: Renardo Alves</p>
+        <div class="ref">
+          <a href="https://wa.me/5573988477950"><img src="../img/Whatsapp.png"></a>
+          <a href="https://github.com/RenardoAlves"><img src="../img/Github.png"></a>
+        </div>
     </div>
     <div class="footer-right">
-      <span class="contato-label">Contato:</span>
+      <span class="contato-label">Visite-nos:</span>
       <div class="social-icons">
-        <a href="https://www.instagram.com/plantasdabahia.com.br/"><img src="img-exemplo/Instagram.png" alt="Instagram"></a>
-        <a href="https://m.facebook.com/profile.php?id=100064770982457&name=xhp_nt__fb__action__open_user"><img src="img-exemplo/Facebook.png" alt="Facebook"></a>
-        <a href="https://wa.me/5573981135119"><img src="img-exemplo/Whatsapp.png" alt="Whatsapp"></a>
-        <a href="mailto:universebeautypb@gmail.com"><img src="img-exemplo/Gmail.png" alt="Gmail"></a>
-        <a href="mailto:universebeautypb@gmail.com"><img src="img-exemplo/Outlook.png" alt="Outlook"></a>
+        <a href="https://www.instagram.com/universopd/"><img src="../img/Instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/BeautyUniversepd"><img src="../img/Facebook.png" alt="Facebook"></a>
+        <a href="https://wa.me/5573981135119"><img src="../img/Whatsapp.png" alt="Whatsapp"></a>
+        <a href="mailto:Universopd1@gmail.com"><img src="../img/Gmail.png" alt="Gmail"></a>
+        <a href="mailto:Universopd1@gmail.com"><img src="../img/Outlook.png" alt="Outlook"></a>
       </div>
     </div>
   </footer>

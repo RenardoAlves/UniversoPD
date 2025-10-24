@@ -140,7 +140,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background 0.3s;
 }
 
@@ -176,6 +176,11 @@
   height: 30px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.social a:nth-of-type(2) img{
+  width: 34px;
+  height: 34px;
 }
 
 .whatsapp-button {
@@ -226,52 +231,138 @@
   color: #555;
 }
 
-/* Relacionados */
-.related {
-  margin-top: -50px;
-  padding: 60px 10%;
-  text-align: center;
-}
+    .section {
+      padding: 60px 10%;
+      text-align: center;
+      background: #e6e6e6;
+    }
 
-.related h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
+    .section h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #0D0D0D;
+    }
 
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0D0D0D;
+    }
 
-.related-item {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
+    .section h1 {
+      color: #555;
+      margin-bottom: 40px;
+    }
 
-.related-item:hover {
-  transform: translateY(-5px);
-}
+    .products {
+      display: flex;
+      gap: 20px;
+      padding: 10px 20px;
+    }
 
-.related-item img {
-  max-height: 199px;
-  width: auto;
-  margin-bottom: 10px;
-}
+    .product {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      width: 259px;
+    }
 
-.related-item p {
-  margin-bottom: 20px;
-  color: #333;
-}
+    .product p{
+      margin-bottom: 20px;
+    }
 
-.related-item .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #555;
-}
+    .product:hover{
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: auto;
+      max-height: 199px;
+      margin-bottom: 15px;
+    }
+
+    /* ======== CARROSSEL DE PRODUTOS ======== */
+
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .carousel {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      width: 90%;
+      padding: 10px;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(145deg, #C9A13C, #a8842f);
+      color: white;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 10px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+    }
+
+    .arrow:hover {
+      background: linear-gradient(145deg, #dcb84a, #b89232);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    /* Produtos individuais dentro do carrossel */
+    .product {
+      flex: 0 0 250px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product .nome{
+      min-height: 3em;
+    }
+
+    .price{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
 
 /* Rodapé */
 
@@ -284,7 +375,6 @@ footer {
   padding: 20px 30px;
   font-size: 14px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
 .footer-left {
@@ -292,9 +382,28 @@ footer {
   text-align: left;
 }
 
+.footer-center{
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-center p{
+  margin-top: 2px;
+}
+
+.footer-center img{
+  width: 24px;
+  height: 24px;
+}
+
 .footer-right img {
   width: 24px;
   height: 24px;
+}
+
+.footer-right span{
+  margin-bottom: 4px;
 }
 
 .footer-right {
