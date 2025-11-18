@@ -6,40 +6,34 @@
   <title>Dazzle Color Vermelho - Universo PD</title>
   <link rel="stylesheet" href="produto.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const carousel = document.querySelector('.carousel');
-      const leftBtn = document.querySelector('.arrow.left');
-      const rightBtn = document.querySelector('.arrow.right');
-
-      rightBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: 500, behavior: 'smooth' });
-      });
-
-      leftBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -500, behavior: 'smooth' });
-      });
-    });
-  </script>
+  <script src="../slider.js"></script>
+  <script src="../menuCelular.js"></script>
 </head>
 <body>
 
   <!-- Cabeçalho -->
   <header>
-    <div class="header-container">
-      <h1><a href="../index.html">Universo PD</a></h1>
-      <nav>
-        <a href="../masculinos.html">Masculinos</a>
-        <a href="../femininos.html">Femininos</a>
-        <a href="../unisex.html">Unisex</a>
-        <a href="../arabes.html">Árabes</a>
-        <a href="../turcos.html">Turcos</a>
-        <a href="../nacionais.html">Nacionais</a>
-      </nav>
-      <div class="header-right">
-        <a href="../sobre.html">Sobre/Contato</a>
-      </div>
+  <div class="header-container">
+    <h1><a href="../index.html">Universo PD</a></h1>
+
+    <!-- Botão do menu MOBILE -->
+    <div class="menu-toggle" id="menuToggle">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+
+    <nav id="menuNav">
+      <a href="../index.html">Home</a>
+      <a href="../masculinos.html">Masculinos</a>
+      <a href="../femininos.html">Femininos</a>
+      <a href="../unisex.html">Unisex</a>
+      <a href="../arabes.html">Árabes</a>
+      <a href="../turcos.html">Turcos</a>
+      <a href="../nacionais.html">Nacionais</a>
+      <a href="../sobre.html">Sobre/Contato</a>
+    </nav>
+  </div>
   </header>
 
   <!-- Produto -->
